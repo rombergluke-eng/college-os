@@ -124,7 +124,7 @@ export function buildWhatShouldIDo(
     const hours = Math.floor(minsAvailable / 60);
     const mins = minsAvailable % 60;
     const windowLabel = hours > 0 ? `${hours}h ${mins}m` : `${mins} minutes`;
-    return `You have ${windowLabel} before "${nextEvent.title}". Spend ${allocations.join(", then ")}.`;
+    return `You have ${windowLabel} before "${nextEvent?.title}". Spend ${allocations.join(", then ")}.`;
   }
 
   const top = ranked[0];
